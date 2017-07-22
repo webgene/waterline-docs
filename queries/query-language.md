@@ -254,3 +254,11 @@ Model.find({ where: { name: 'foo' }, sort: { 'name': 1 }});
 // Sort by multiple attributes
 Model.find({ where: { name: 'foo' }, sort: { name:  1, age: 0 });
 ```
+
+### Select
+`select` can be used to project required fields(partial object selection).
+
+```javascript
+// Select name and age from the database.
+Model.find({ where: { name: 'foo' }, select: ['name','age'] });
+```
